@@ -18,6 +18,7 @@
     justify-content: center;
     background: $light-green;
     font-weight: 500;
+    align-items: center;
     span {
       margin: 10px;
     }
@@ -27,6 +28,8 @@
 
       &.home {
         margin-top: 20px;
+        display: flex;
+        align-items: center;
       }
     }
   }
