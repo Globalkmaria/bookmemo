@@ -21,6 +21,7 @@ export const saveItem = ({ id, data, editedTime }) => async (
   const itemsData = getState().items;
   console.log(itemsData);
   const items = itemsData.data;
+  // eslint-disable-next-line
   const sameitem = items.find((item) => item.id == id);
   console.log(sameitem);
   if (sameitem) {
@@ -41,6 +42,7 @@ export const getItems = (token) => async (dispatch, getState) => {
   try {
     dispatch({ type: GET_ITEMS_PENDING });
     let { data } = await getLocalItems(token);
+    // eslint-disable-next-line
     if (data == undefined) {
       data = [];
     }
