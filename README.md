@@ -9,24 +9,29 @@
 
 ### 책 검색 기능과 함께 책 메모를 할 수 있는 서비스
 
-## Why Bookmemo?
-
 - 라이트모드/다크모드 제공
+- 책 검색 기능
   <br>
-  <img src="./src/img/home_b.png" width="300">
-  <img src="./src/img/home-d.png" width="300">
+  <img src="./src/img/home_b.png" width="500">
+  <img src="./src/img/home-d.png" width="500">
   <br>
 - 계정 생성, 로그인을 통한 개인 독서 기록 관리 제공
   <br>
-  <img src="./src/img/create_account.png" width="500">
   <img src="./src/img/login.png" width="500">
+  <img src="./src/img/signin.png" width="500">
   <br>
 - 책 메모 서비스 이용 시 API를 통한 책 정보 자동 입력
 - 독서 기록, 수정, 관리 기능
   <br>
-  <img src="./src/img/item.png" width="500">
-  <img src="./src/img/items.png" width="500">
-  <img src="./src/img/saved_books.png" width="500">
+  <img src="./src/img/items_b.png" width="500">
+  <img src="./src/img/items_d.png" width="500">
+  <img src="./src/img/item_b.png" width="500">
+  <img src="./src/img/item_d.png" width="500">
+  <br>
+- 검색한 책 저장 기능
+  <br>
+  <img src="./src/img/save_b.png" width="500">
+  <img src="./src/img/save_d.png" width="500">
   <br>
 
 ## Installation
