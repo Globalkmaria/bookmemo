@@ -1,0 +1,59 @@
+@mixin page-flex {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+// editpage
+.edit-page{
+  @include page-flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+// Items-page
+.items-page{
+  @include page-flex;
+}
+// Item-page
+.item-page{
+  @include page-flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+// login-page
+.login-page, .signup-page{
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  .picbox{
+    position: absolute;
+    background-image: url(../img/bookim.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100vw;
+    min-height: 100vh;
+    &::after{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        left: 0;
+        top: 0;
+    }
+    z-index: 1;
+  }
+  .textbox{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+}

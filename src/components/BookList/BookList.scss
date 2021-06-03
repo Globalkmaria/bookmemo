@@ -1,0 +1,19 @@
+.info{
+  display: flex;
+  justify-content: center;
+}
+.bookList-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1000px;
+  .bookList {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+  }
+}
+.info{
+  width: 100%;
+}

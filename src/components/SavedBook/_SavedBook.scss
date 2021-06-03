@@ -1,0 +1,23 @@
+.book {
+  .pop-container{
+    width: 100px;
+    height: 100px;
+  }
+  position: relative;
+
+  .cancel-icon {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: -1px;
+    right: 0px;
+    font-size: 20px;
+    display: none;
+  }
+
+  &:hover {
+    .cancel-icon {
+      display: block;
+    }
+  }
+}

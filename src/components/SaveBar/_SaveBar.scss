@@ -1,0 +1,101 @@
+.savebar {
+  min-width: 100px;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px;
+  padding: 10px 0;
+  position: sticky;
+  top: 40px;
+
+  ul {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: $color;
+    width: 100%;
+  }
+
+  button {
+    min-width: 50px;
+    width: 80%;
+    font-size: 0.9rem;
+    margin-top: 9px;
+  }
+
+}
+
+.savedBook {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .savedBook-img {
+    position: relative;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+
+  }
+
+  .cancel-icon {
+    @include flex-center;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    color: if($theme=="light", $dark-font, $light-font);
+    position: absolute;
+    top: -15px;
+    right: -5px;
+    display: none;
+  }
+
+  .title {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 35px;
+    top: 29%;
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &:hover {
+    .savedBook-img::after {
+      content: "";
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      top: 0;
+      left: 0;
+    }
+
+    span {
+      display: flex;
+    }
+  }
+}
