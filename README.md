@@ -13,7 +13,7 @@
 - 책 검색 기능
   <br>
   <img src="./src/img/home_b.png" width="500">
-  <img src="./src/img/home-d.png" width="500">
+  <img src="./src/img/home_d.png" width="500">
   <br>
 - 계정 생성, 로그인을 통한 개인 독서 기록 관리 제공
   <br>
