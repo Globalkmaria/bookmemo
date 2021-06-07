@@ -30,8 +30,8 @@
   <br>
 - 검색한 책 저장 기능
   <br>
-  <img src="./src/img/save_b.png" width="500">
-  <img src="./src/img/save_d.png" width="500">
+  <img src="./src/img/save_b.jpg" width="500">
+  <img src="./src/img/save_d.jpg" width="500">
   <br>
 
 ## Installation
