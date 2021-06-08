@@ -15,17 +15,20 @@ function Search({ getbooks, loading, data }) {
   return (
     <>
       <div className="search-input">
-        <form onSubmit={onSubmit}>
-          <input
-            type="text"
-            value={input}
-            onChange={onChange}
-            placeholder="책제목을 입력하세요"
-          />
-          <button type="submit">
-            <AiOutlineSearch />
-          </button>
-        </form>
+        <div className="search-input-inner">
+          <form onSubmit={onSubmit}>
+            <input
+              type="text"
+              value={input}
+              onChange={onChange}
+              placeholder="책제목을 입력하세요"
+            />
+            <button type="submit">
+              <AiOutlineSearch />
+            </button>
+          </form>
+        </div>
+        <div className="search-input-outer"></div>
       </div>
       {loading && !data && <div className="info">로딩중...</div>}
     </>
