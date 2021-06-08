@@ -1,34 +1,22 @@
-.search-input {
-  transition: all 500ms;
+.search-input{
+  transition: all 500ms ;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   margin: 20px 0;
-
-  .search-input-inner {
-    flex: 8 8;
-    display: flex;
-    justify-content: center;
-
-    form {
-      padding: 8px;
+  form{
+    padding: 8px;
       border: if($theme=="light", 2px solid #080808, 2px solid #e9ecef);
       border-radius: 20px;
       display: flex;
-      width: 50%;
-      min-width: 300px;
-
       input {
-        width: 100%;
-        text-align: center;
         max-width: 500px;
-        min-width: 260px;
+        min-width: 300px;
         font-size: 1.2rem;
         background: none;
         border: none;
         color: if($theme=="light", $dark-font, $light-font);
       }
-
       button {
         font-size: 1.5rem;
         background: none;
@@ -36,9 +24,4 @@
         color: if($theme=="light", $dark-font, $light-font);
       }
     }
-  }
-
-  .search-input-outer {
-    flex: 2 2;
-  }
 }
