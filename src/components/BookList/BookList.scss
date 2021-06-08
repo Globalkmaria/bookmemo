@@ -5,8 +5,8 @@
 .bookList-wrapper{
   display: flex;
   flex-direction: column;
-  width: 80%;
-  max-width: 1000px;
+  flex: 8.5 8.5;
+  // max-width: 1000px;
   .bookList {
     display: flex;
     flex-wrap: wrap;

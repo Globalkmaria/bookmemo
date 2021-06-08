@@ -9,7 +9,7 @@ function Home() {
   const { query, data } = useSelector((state) => state.books);
   useInfiniteScroll(query, fetchBookList);
   return (
-    <section className="section">
+    <section className="home">
       <SearchContainer />
       {data && <ShowSearchContainer />}
     </section>
