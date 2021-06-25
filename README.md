@@ -4,7 +4,7 @@
 
 - [Technologies](#technologies)
 - [What is Bookmemo](#what-is-bookmemo)
-- [Installation](#installation)
+- [Setup](#Setup)
 
 ## Technologies
 
