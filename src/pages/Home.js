@@ -10,7 +10,7 @@ function Home() {
   useInfiniteScroll(query, fetchBookList);
   return (
     <section className="home">
-      <SearchContainer />
+      <SearchContainer content_undersearch={data ? true : false} />
       {data && <ShowSearchContainer />}
     </section>
   );

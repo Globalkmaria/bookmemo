@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-function Search({ getbooks, loading, data }) {
+function Search({ getbooks, loading, data, content_undersearch }) {
   const [input, setInput] = useState('');
   const onChange = (e) => {
     setInput(e.target.value);
@@ -15,7 +15,10 @@ function Search({ getbooks, loading, data }) {
   return (
     <>
       <div className="search-input">
-        <div className="search-input-inner">
+        <div
+          className="search-input-inner"
+          style={{ width: content_undersearch ? '85%' : '100%' }}
+        >
           <form onSubmit={onSubmit}>
             <input
               type="text"
@@ -30,7 +33,14 @@ function Search({ getbooks, loading, data }) {
         </div>
         {/* <div className="search-input-outer"></div> */}
       </div>
-      {loading && !data && <div className="info">로딩중...</div>}
+      {loading && !data && (
+        <div
+          className="info"
+          style={{ width: content_undersearch ? '85%' : '100%' }}
+        >
+          로딩중...
+        </div>
+      )}
     </>
   );
 }

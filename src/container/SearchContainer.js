@@ -4,7 +4,7 @@ import Search from '../components/Search';
 import { fetchBookList } from '../modules/books';
 import { useSelector } from 'react-redux';
 
-function SearchContainer() {
+function SearchContainer({ content_undersearch }) {
   const dispatch = useDispatch();
   const { loading, data } = useSelector((state) => state.books);
   const getbooks = (query) => {
@@ -13,7 +13,12 @@ function SearchContainer() {
 
   return (
     <>
-      <Search getbooks={getbooks} loading={loading} data={data} />
+      <Search
+        getbooks={getbooks}
+        loading={loading}
+        data={data}
+        content_undersearch={content_undersearch}
+      />
     </>
   );
 }
