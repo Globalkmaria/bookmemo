@@ -17,30 +17,37 @@ function SavedBook({ book, onDelete }) {
     setClick(true);
     setTimeout(() => {
       setClick(false);
-    }, 500);
+    }, 700);
   };
   return (
-    <li className="book">
-      <span className="cancel-icon" onClick={(e) => onDelete(e, book.id)}>
-        <RiDeleteBin7Line />
-      </span>
-      <Book book={book} />
-      {token && (
-        <button className="btn">
-          <Link to={{ pathname: '/edit', state: { book: book } }}>
-            독서 노트 작성
-          </Link>
-        </button>
-      )}
-      {token || (
-        <>
-          <button className="btn" onClick={onPop}>
-            독서 노트 작성
+    <>
+      <li className="book">
+        <span className="cancel-icon" onClick={(e) => onDelete(e, book.id)}>
+          <RiDeleteBin7Line />
+        </span>
+        <Book book={book} />
+        {token && (
+          <button className="btn">
+            <Link to={{ pathname: '/edit', state: { book: book } }}>
+              독서 노트 작성
+            </Link>
           </button>
-        </>
-      )}
-      {click && <span>로그인 시 이용 가능한 서비스입니다</span>}
-    </li>
+        )}
+        {token || (
+          <>
+            <button className="btn" onClick={onPop}>
+              독서 노트 작성
+            </button>
+          </>
+        )}
+        <div
+          className="savedbook__info__login-to-use"
+          style={{ opacity: click ? '1' : '0' }}
+        >
+          <span>로그인 시 이용 가능한 서비스입니다</span>
+        </div>
+      </li>
+    </>
   );
 }
 
