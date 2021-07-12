@@ -19,7 +19,7 @@ function Login() {
   };
   return (
     <div className="login">
-      <form action="submit" onSubmit={onSubmit}>
+      <form className="login-form" action="submit" onSubmit={onSubmit}>
         <fieldset>
           <legend>LOGIN</legend>
           <div className="id-box form-input">
