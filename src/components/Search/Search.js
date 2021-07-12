@@ -28,7 +28,7 @@ function Search({ getbooks, loading, data }) {
             </button>
           </form>
         </div>
-        <div className="search-input-outer"></div>
+        {/* <div className="search-input-outer"></div> */}
       </div>
       {loading && !data && <div className="info">로딩중...</div>}
     </>

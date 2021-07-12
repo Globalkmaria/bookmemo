@@ -6,11 +6,27 @@
 
 // Home
 .home {
-  max-width: 1200px;
+  width: 1200px;
   // display: flex;
   // flex-direction: column;
   // align-content: center;
   // padding: 0px 10px 15px 10px;
+}
+@media all and (max-width: 1200px) {
+  .home{
+    width: 1000px;
+}
+}
+
+@media all and (max-width: 950px) {
+  .home{
+    width: 800px;
+}
+}
+@media all and (max-width: 650px) {
+  .home{
+    width: 600px;
+}
 }
 
 // editpage

@@ -18,18 +18,17 @@ function Book({ book }) {
     status,
   } = book;
   const date = datetime.slice(0, 10);
+  const sliced_title = title.length > 10 ? title.slice(0, 10) + '...' : title;
   return (
     <a href={url} target="_blank" rel="noopener noreferrer">
       <article>
-        <h4 className="title" title={title}>
-          {title}
-        </h4>
-        <p className="cover">
+        <h4 className="title">{sliced_title}</h4>
+        <div className="cover">
           <img
             src={thumbnail ? thumbnail : noImage}
             alt={thumbnail ? '표지 썸네일' : '썸네일 없음'}
           />
-        </p>
+        </div>
         <dl className="book-detail">
           <div>
             <dt aria-label="지은이" />

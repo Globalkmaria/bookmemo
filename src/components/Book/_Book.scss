@@ -1,9 +1,9 @@
 .book {
   display: block;
-  padding: 15px 15px;
-  margin: 15px 20px;
-  width: 220px;
-  height: 330px;
+  padding: 20px 15px;
+  margin: 15px 15px;
+  width: 180px;
+  // height: 330px;
   background-color: if($theme=="light", none, $light-green);
   border-radius: 20px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3), 1px 1px 5px rgba(0, 0, 0, 0.1) inset;
@@ -12,15 +12,20 @@
   &:hover {
     transform: scale(1.1);
   }
+  
   a {
     article {
+      & > *{
+        margin-bottom: 8px;
+      }
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
-      height: 90%;
+      // height: 90%;
       color: if($theme=="light", $dark-font, $dark-font);
       transition: all 200ms ease-out;
+
       h4 {
         font-weight: 600;
         font-size: 0.9rem;
@@ -30,10 +35,10 @@
         line-height: 1.3;
       }
 
-      p {
+      .cover {
         img {
-          width: 110px;
-          height: 164px;
+          width: 100px;
+          // height: 164px;
           box-shadow:
             if($theme=="light", 4px 4px 8px #808080, 4px 4px 8px rgba(0, 0, 0, 0.5));
         }
@@ -56,9 +61,18 @@
       }
     }
   }
+
   button {
     width: 100%;
     font-weight: 600;
     transition: all 200ms ease-out;
+    margin-bottom: 2px;
+  }
+}
+
+// MEDIA
+@media all and (max-width: 660px) {
+  .book {
+    width: 170px
   }
 }

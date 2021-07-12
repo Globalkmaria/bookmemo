@@ -25,26 +25,30 @@ function SavedBookItem({ savedbook, onDelete }) {
 
 function SaveBar({ savebooks, onReset, onDelete }) {
   return (
-    <nav className="savebar">
-      <ul>
-        {savebooks &&
-          savebooks.map((savedbook) => (
-            <SavedBookItem
-              key={uuidv4()}
-              savedbook={savedbook}
-              onDelete={onDelete}
-            />
-          ))}
-      </ul>
-      <button className="btn" onClick={onReset}>
-        비우기
-      </button>
-      <Link to="/savedBooks">
-        <button className="btn">
-          저장한 <br />책 목록 열기
-        </button>
-      </Link>
-    </nav>
+    <div className="savebar">
+      <div className="savebar__container">
+        <ul>
+          {savebooks &&
+            savebooks.map((savedbook) => (
+              <SavedBookItem
+                key={uuidv4()}
+                savedbook={savedbook}
+                onDelete={onDelete}
+              />
+            ))}
+        </ul>
+        <div className="btn-container">
+          <button className="btn" onClick={onReset}>
+            비우기
+          </button>
+          <Link to="/savedBooks">
+            <button className="btn">
+              저장한 <br />책 목록 열기
+            </button>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }
 
