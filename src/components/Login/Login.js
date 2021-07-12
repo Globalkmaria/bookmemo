@@ -50,16 +50,16 @@ function Login() {
           </div>
           <div className="btn-grounp">
             <button className="form-button btn" onSubmit={onSubmit}>
-              로그인
+              Sign in
             </button>
             <Link to="/signup">
               <button type="button" className="form-button btn">
-                회원가입
+                Sign Up
               </button>
             </Link>
             <Link to="/">
               <button type="button" className="form-button btn">
-                홈으로
+                Home
               </button>
             </Link>
           </div>

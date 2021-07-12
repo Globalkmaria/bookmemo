@@ -24,7 +24,7 @@ function Search({ getbooks, loading, data, content_undersearch }) {
               type="text"
               value={input}
               onChange={onChange}
-              placeholder="책제목을 입력하세요"
+              placeholder="Search here..."
             />
             <button type="submit">
               <AiOutlineSearch />

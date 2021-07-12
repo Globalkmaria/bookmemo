@@ -30,7 +30,7 @@ function SignupComponent() {
     if (input.id === '' || input.password === '' || input.checkPassword === '')
       return;
     if (!(input.password === input.checkPassword)) {
-      alert('비밀번호가 일치하지 않습니다.');
+      alert('Check your password.');
     }
     signup(input);
   };
@@ -38,52 +38,57 @@ function SignupComponent() {
     <div className="signup">
       <form action="submit" onSubmit={onSubmit}>
         <fieldset>
-          <legend>회원가입</legend>
+          <legend>
+            Create your <br /> account!
+          </legend>
           <div className="id-box form-input">
-            <label htmlFor="id">아이디</label>
+            {/* <label htmlFor="id"></label> */}
             <input
               type="text"
               id="id"
               name="id"
               value={input.id}
               onChange={onChange}
+              placeholder="ID"
             />
           </div>
           <div className="password-box form-input">
-            <label htmlFor="password">비밀번호</label>
+            {/* <label htmlFor="password">Password</label> */}
             <input
               type="password"
               id="password"
               value={input.password}
               onChange={onChange}
               name="password"
+              placeholder="Password"
             />
           </div>
           <div className="password-box form-input">
-            <label htmlFor="password">비밀번호 확인</label>
+            {/* <label htmlFor="password"></label> */}
             <input
               type="password"
               id="checkPassword"
               value={input.checkPassword}
               onChange={onCheck}
               name="checkPassword"
+              placeholder="Confirm Password"
             />
           </div>
-          <p className={`repeat ${check}`}>비밀번호가 일치하지 않습니다.</p>
+          <p className={`repeat ${check}`}>Passwords must match</p>
           <div className="btn-grounp">
             <button
               type="submit"
               className="form-button btn"
               onSubmit={onSubmit}
             >
-              가입하기
+              Sign Up
             </button>
-            <p>이미 계정이 있으신가요?</p>
+            <p>Already have an account?</p>
             <Link to="/login">
-              <button className="form-button btn">로그인</button>
+              <button className="form-button btn">Sign in</button>
             </Link>
             <Link to="/">
-              <button className="form-button btn">홈으로</button>
+              <button className="form-button btn">Home</button>
             </Link>
           </div>
         </fieldset>
