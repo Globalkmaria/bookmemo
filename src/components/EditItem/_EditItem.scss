@@ -8,7 +8,6 @@
   top: 0;
   background: rgba(0, 0, 0, 0.4);
   left: 0;
-
   .pop-inner {
     width: 400px;
     height: 400px;
@@ -16,9 +15,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: $light-green;
     font-weight: 500;
     align-items: center;
+    @if($theme == 'light'){
+      background:   $light-brown;
+    }@else{
+      
+      background: $light-green;
+    }
     span {
       margin: 10px;
     }
