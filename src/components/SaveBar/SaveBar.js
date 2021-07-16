@@ -27,7 +27,7 @@ function SaveBar({ savebooks, onReset, onDelete }) {
   return (
     <div className="savebar">
       <div className="savebar__container">
-        <ul>
+        <ul className="savebar__list">
           {savebooks &&
             savebooks.map((savedbook) => (
               <SavedBookItem
