@@ -15,16 +15,13 @@ function Search({ getbooks, loading, data, content_undersearch }) {
   return (
     <>
       <div className="search-input">
-        <div
-          className="search-input-inner"
-          style={{ width: content_undersearch ? '85%' : '100%' }}
-        >
+        <div className="search-input-inner">
           <form onSubmit={onSubmit}>
             <input
               type="text"
               value={input}
               onChange={onChange}
-              placeholder="Search here..."
+              placeholder="검색어를 입력하세요..."
             />
             <button type="submit">
               <AiOutlineSearch />
@@ -33,14 +30,7 @@ function Search({ getbooks, loading, data, content_undersearch }) {
         </div>
         {/* <div className="search-input-outer"></div> */}
       </div>
-      {loading && !data && (
-        <div
-          className="info"
-          style={{ width: content_undersearch ? '85%' : '100%' }}
-        >
-          로딩중...
-        </div>
-      )}
+      {loading && !data && <div className="info">로딩중...</div>}
     </>
   );
 }

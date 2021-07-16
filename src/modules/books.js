@@ -1,6 +1,10 @@
+import { recommandBookData } from '../api/Id';
 import Kakao from '../api/Kakao';
 import sleep from '../utils/sleep';
 // 액션타입
+
+const GET_RECOMMANDBOOKS_SUCCESS = 'GET_RECOMMANDBOOKS_SUCCESS';
+
 const GET_BOOKS_PENDING = 'GET_BOOKS_PENDING';
 const GET_BOOKS_SUCCESS = 'GET_BOOKS_SUCCESS';
 const GET_BOOKS_FAILURE = 'GET_BOOKS_FAILURE';
@@ -9,12 +13,25 @@ export const initialState = {
   loading: false,
   query: '',
   page: 1,
-  data: null,
-  isEnd: null,
+  data: recommandBookData,
+  isEnd: true,
   error: null,
 };
 
 // 액션 생성함수
+export const fetchRecommadBook = (recommand, query = '', loadMore = false) => (
+  dispatch,
+  getState
+) => {
+  console.log(`recommand: ${recommand}`);
+  const data = recommandBookData;
+  dispatch({
+    type: GET_RECOMMANDBOOKS_SUCCESS,
+    data: data,
+    isEnd: true,
+    loadMore,
+  });
+};
 export const fetchBookList = (
   query,
   loadMore = false,
@@ -49,6 +66,13 @@ export const fetchBookList = (
 export default function books(state = initialState, action) {
   const { type, loadMore, query, data, isEnd, error } = action;
   switch (type) {
+    case GET_RECOMMANDBOOKS_SUCCESS:
+      return {
+        ...state,
+        data,
+        isEnd,
+        query,
+      };
     case GET_BOOKS_PENDING:
       return {
         loading: true,
@@ -58,6 +82,15 @@ export default function books(state = initialState, action) {
         data: loadMore ? state.data : null,
         error: null,
       };
+    // case GET_BOOKS_SUCCESS:
+    // return {
+    //   ...state,
+    //   loading: false,
+    //   page: state.page + 1,
+    //   isEnd,
+    //   data: loadMore ? [...state.data, ...data] : data,
+    //   error: null,
+    // };
     case GET_BOOKS_SUCCESS:
       return {
         ...state,
