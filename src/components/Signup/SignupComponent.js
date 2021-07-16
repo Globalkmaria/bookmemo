@@ -38,9 +38,7 @@ function SignupComponent() {
     <div className="signup">
       <form action="submit" onSubmit={onSubmit}>
         <fieldset>
-          <legend>
-            Create your <br /> account!
-          </legend>
+          <legend>회원가입</legend>
           <div className="id-box form-input">
             {/* <label htmlFor="id"></label> */}
             <input
@@ -49,7 +47,7 @@ function SignupComponent() {
               name="id"
               value={input.id}
               onChange={onChange}
-              placeholder="ID"
+              placeholder="아이디"
             />
           </div>
           <div className="password-box form-input">
@@ -60,7 +58,7 @@ function SignupComponent() {
               value={input.password}
               onChange={onChange}
               name="password"
-              placeholder="Password"
+              placeholder="비밀번호"
             />
           </div>
           <div className="password-box form-input">
@@ -71,24 +69,26 @@ function SignupComponent() {
               value={input.checkPassword}
               onChange={onCheck}
               name="checkPassword"
-              placeholder="Confirm Password"
+              placeholder="비밀번호 확인"
             />
           </div>
-          <p className={`repeat ${check}`}>Passwords must match</p>
+          <p className={`repeat ${check}`}>
+            비밀번호가 일치하는지 확인해주세요
+          </p>
           <div className="btn-grounp">
             <button
               type="submit"
               className="form-button btn"
               onSubmit={onSubmit}
             >
-              Sign Up
+              가입하기
             </button>
-            <p>Already have an account?</p>
+            <p>이미 회원이신가요?</p>
             <Link to="/login">
-              <button className="form-button btn">Sign in</button>
+              <button className="form-button btn">로그인하기</button>
             </Link>
             <Link to="/">
-              <button className="form-button btn">Home</button>
+              <button className="form-button btn">홈으로</button>
             </Link>
           </div>
         </fieldset>

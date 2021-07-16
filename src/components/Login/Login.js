@@ -21,7 +21,7 @@ function Login() {
     <div className="login">
       <form className="login-form" action="submit" onSubmit={onSubmit}>
         <fieldset>
-          <legend>LOGIN</legend>
+          <legend>Bookmemo</legend>
           <div className="id-box form-input">
             <label htmlFor="id">
               <BsFillPersonFill />
@@ -32,7 +32,7 @@ function Login() {
               name="id"
               value={input.id}
               onChange={onChange}
-              placeholder="ID"
+              placeholder="아이디"
             />
           </div>
           <div className="password-box form-input">
@@ -45,21 +45,21 @@ function Login() {
               value={input.password}
               onChange={onChange}
               name="password"
-              placeholder="PASSWORD"
+              placeholder="비밀번호"
             />
           </div>
           <div className="btn-grounp">
             <button className="form-button btn" onSubmit={onSubmit}>
-              Sign in
+              로그인
             </button>
             <Link to="/signup">
               <button type="button" className="form-button btn">
-                Sign Up
+                회원가입
               </button>
             </Link>
             <Link to="/">
               <button type="button" className="form-button btn">
-                Home
+                홈으로
               </button>
             </Link>
           </div>
