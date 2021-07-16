@@ -11,8 +11,10 @@ export const useDarkMode = () => {
   const toggleTheme = () => {
     console.log('toggleTheme');
     if (theme === 'light') {
+      document.body.style = 'background: #3e4434;';
       setMode('dark');
     } else {
+      document.body.style = 'background: #fcf7ed';
       setMode('light');
     }
   };

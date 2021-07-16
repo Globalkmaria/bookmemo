@@ -21,7 +21,6 @@ function App() {
     const token = getLocalToken();
     setToken(token);
     dispatch(getItems(token));
-
     return () => {
       logout();
     };
@@ -31,6 +30,12 @@ function App() {
   };
   if (!componentMounted) {
     return <div />;
+  } else {
+    if (theme === 'light') {
+      document.body.style = 'background: #fcf7ed';
+    } else {
+      document.body.style = 'background: #3e4434;';
+    }
   }
   return (
     <div className={`App ${theme}`}>
