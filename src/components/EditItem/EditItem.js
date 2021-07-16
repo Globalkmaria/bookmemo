@@ -54,8 +54,8 @@ function EditItem({ book, id }) {
   return (
     <>
       {finished && <Popinfo />}
-      <div className="edit-box">
-        <div className="imgbox">
+      <div className="edit-container">
+        <div className="img-box">
           <img
             src={thumbnail ? thumbnail : noImage}
             alt={thumbnail ? '표지 썸네일' : '썸네일 없음'}
@@ -86,8 +86,8 @@ function EditItem({ book, id }) {
                 placeholder="제목을 입력하세요"
               />
             </div>
-            <div className="input-inner">
-              <div className="left-box">
+            <div className="input-container">
+              <div className="input-container__left-box">
                 <div className="input-box">
                   <label htmlFor="title">
                     <span>책 제목</span>
@@ -113,7 +113,7 @@ function EditItem({ book, id }) {
                   />
                 </div>
               </div>
-              <div className="right-box">
+              <div className="input-container__right-box">
                 <div className="input-box">
                   <label htmlFor="publisher">
                     <span>출판사</span>

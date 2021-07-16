@@ -40,7 +40,7 @@
   }
 }
 // edit-main
-.edit-box {
+.edit-container {
   @mixin input-clear {
     input {
       color: if($theme=='light', $dark-font, $light-font);
@@ -76,7 +76,7 @@
     @include shadow;
   }
 
-  .imgbox {
+  .img-box {
     min-width: 84px;
     width: 15vh;
     padding: 10px;
@@ -152,12 +152,12 @@
         }
       }
 
-      .input-inner {
+      .input-container {
         @include flex-center;
         flex-wrap: wrap;
         flex-direction: row;
 
-        .left-box {
+        .input-container__left-box {
           margin-right: 10px;
         }
 

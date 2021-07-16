@@ -5,7 +5,7 @@ import { RiLockPasswordFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { login } from '../../modules/login';
 
-function Login() {
+function LoginComponent() {
   const [input, setInput] = useState({ id: '', password: '' });
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +18,7 @@ function Login() {
     login(input.id, input.password);
   };
   return (
-    <div className="login">
+    <div className="login-page-content">
       <form className="login-form" action="submit" onSubmit={onSubmit}>
         <fieldset>
           <legend>Bookmemo</legend>
@@ -48,7 +48,7 @@ function Login() {
               placeholder="비밀번호"
             />
           </div>
-          <div className="btn-grounp">
+          <div className="access-btn-group">
             <button className="form-button btn" onSubmit={onSubmit}>
               로그인
             </button>
@@ -69,4 +69,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginComponent;

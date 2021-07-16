@@ -5,8 +5,7 @@
   // justify-content: center;
   margin: 20px 0;
 
-  .search-input-inner {
-    // flex: 8.5 8.5;
+  .search-input__container {
     width: 85%;
     display: flex;
     justify-content: center;
@@ -38,10 +37,6 @@
       }
     }
   }
-
-  // .search-input-outer {
-  //   flex: 1.5 1.5;
-  // }
 
 }
 

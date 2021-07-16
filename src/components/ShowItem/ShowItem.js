@@ -15,8 +15,8 @@ function ShowItem({ item }) {
   } = item.data;
 
   return (
-    <div className="show-box">
-      <div className="imgbox">
+    <div className="showItem-container">
+      <div className="img-box">
         <img
           src={thumbnail ? thumbnail : noImage}
           alt={thumbnail ? '표지 썸네일' : '썸네일 없음'}

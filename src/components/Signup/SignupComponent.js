@@ -35,12 +35,11 @@ function SignupComponent() {
     signup(input);
   };
   return (
-    <div className="signup">
-      <form action="submit" onSubmit={onSubmit}>
+    <div className="signup-page-content">
+      <form className="signup-form" action="submit" onSubmit={onSubmit}>
         <fieldset>
           <legend>회원가입</legend>
           <div className="id-box form-input">
-            {/* <label htmlFor="id"></label> */}
             <input
               type="text"
               id="id"
@@ -75,7 +74,7 @@ function SignupComponent() {
           <p className={`repeat ${check}`}>
             비밀번호가 일치하는지 확인해주세요
           </p>
-          <div className="btn-grounp">
+          <div className="access-btn-group">
             <button
               type="submit"
               className="form-button btn"

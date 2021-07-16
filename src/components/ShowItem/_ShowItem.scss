@@ -1,4 +1,4 @@
-.show-box {
+.showItem-container {
   @mixin input-clear {
     input {
       color: if($theme=='light', $dark-font, $light-font);
@@ -34,7 +34,7 @@
     @include shadow;
   }
 
-  .imgbox {
+  .img-box {
     min-width: 84px;
     width: 15vh;
     padding: 10px;

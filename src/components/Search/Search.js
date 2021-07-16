@@ -15,7 +15,7 @@ function Search({ getbooks, loading, data, content_undersearch }) {
   return (
     <>
       <div className="search-input">
-        <div className="search-input-inner">
+        <div className="search-input__container">
           <form onSubmit={onSubmit}>
             <input
               type="text"
@@ -28,7 +28,6 @@ function Search({ getbooks, loading, data, content_undersearch }) {
             </button>
           </form>
         </div>
-        {/* <div className="search-input-outer"></div> */}
       </div>
       {loading && !data && <div className="info">로딩중...</div>}
     </>

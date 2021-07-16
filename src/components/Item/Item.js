@@ -9,8 +9,8 @@ function Item({ item, onDelete }) {
         <RiDeleteBin7Line />
       </span>
       <h2>{itemTitle}</h2>
-      <span className="itemTitle">{title}</span>
-      <span className="editedTime">마지막 수정일 : {editedTime}</span>
+      <span className="item-title">{title}</span>
+      <span className="edited-time">마지막 수정일 : {editedTime}</span>
       <span className="date">최초 작성일 : {date}</span>
     </li>
   );
