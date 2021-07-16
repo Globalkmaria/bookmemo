@@ -4,6 +4,7 @@
 
 You can try the project.
 Project Link: <https://bookmemo-dfea6.web.app/>
+Test account -> id: test, password: 1234
 
 ## Table of contents
 
@@ -18,8 +19,6 @@ Project Link: <https://bookmemo-dfea6.web.app/>
 - react-router-dom
 - Rest API(Kakao API)
 - SASS(SCSS)
-
-Test account -> id: test, password: 1234
 
 ## What is Bookmemo?
 

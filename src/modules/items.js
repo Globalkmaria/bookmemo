@@ -21,8 +21,7 @@ export const saveItem = ({ id, data, editedTime }) => async (
   const itemsData = getState().items;
   console.log(itemsData);
   const items = itemsData.data;
-  // eslint-disable-next-line
-  const sameitem = items.find((item) => item.id == id);
+  const sameitem = items.find((item) => item.id * 1 === id * 1);
   console.log(sameitem);
   if (sameitem) {
     dispatch({ type: DELETE_ITEM, id: id });
