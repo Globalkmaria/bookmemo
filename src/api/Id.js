@@ -299,8 +299,6 @@ export const saveAccount = (id, password) =>
 
 export const getLocalItems = (token) =>
   new Promise((res, reject) => {
-    console.log(token);
-    console.log('getlocalItem 실행');
     if (token) {
       setTimeout(() => {
         // res(JSON.stringify(localStorage.getItem(`${token}_items`)));
