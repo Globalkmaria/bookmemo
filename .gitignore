@@ -1,7 +1,0 @@
-node_modules
-.gitignore
-build/
-*.map
-*.chunk.js
-*.chunk.css
-*.chunk.js.map
