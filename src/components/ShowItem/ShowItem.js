@@ -12,16 +12,18 @@ function ShowItem({ item }) {
     publishedDate,
     text,
     thumbnail,
+    url,
   } = item.data;
-
+  // console.log(url);
   return (
     <div className="showItem-container">
-      <div className="img-box">
+      <a href={url} target="_blank" rel="noopener noreferrer">
+        <div className="img-box"></div>
         <img
           src={thumbnail ? thumbnail : noImage}
           alt={thumbnail ? '표지 썸네일' : '썸네일 없음'}
         />
-      </div>
+      </a>
       <form>
         <div className="inputs-container">
           <div className="date-box">

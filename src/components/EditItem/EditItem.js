@@ -24,7 +24,7 @@ function EditItem({ book, id }) {
   const dispatch = useDispatch();
   const [finished, setFinished] = useState(false);
   const todaydate = today();
-  const { title, thumbnail, authors, publisher } = book;
+  const { title, thumbnail, authors, publisher, url } = book;
   const itemTitle = book.itemTitle ? book.itemTitle : '';
   const publishedDate = book.publishedDate
     ? book.publishedDate
@@ -39,6 +39,7 @@ function EditItem({ book, id }) {
     publishedDate: publishedDate,
     text: text,
     thumbnail: thumbnail,
+    url: url,
   });
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -55,12 +56,14 @@ function EditItem({ book, id }) {
     <>
       {finished && <Popinfo />}
       <div className="edit-container">
-        <div className="img-box">
-          <img
-            src={thumbnail ? thumbnail : noImage}
-            alt={thumbnail ? '표지 썸네일' : '썸네일 없음'}
-          />
-        </div>
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          <div className="img-box">
+            <img
+              src={thumbnail ? thumbnail : noImage}
+              alt={thumbnail ? '표지 썸네일' : '썸네일 없음'}
+            />
+          </div>
+        </a>
         <form action="submit" onSubmit={onSubmit}>
           <div className="inputs-container">
             <div className="date-box">
