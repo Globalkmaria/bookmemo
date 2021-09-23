@@ -15,7 +15,7 @@ export async function login(id, password) {
     await getItems(token);
     window.location.assign('/');
   } catch (e) {
-    console.log(e);
+    // console.log(e);
     alert(e);
   }
 }
@@ -36,7 +36,7 @@ export async function signup(input) {
       login(input.id, input.password);
     }
   } catch (e) {
-    console.log(e);
+    // console.log(e);
     alert(e);
   }
 }

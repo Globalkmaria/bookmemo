@@ -1,6 +1,7 @@
 import { recommandBookData } from '../api/Id';
 import Kakao from '../api/Kakao';
 import sleep from '../utils/sleep';
+
 // 액션타입
 
 const GET_RECOMMANDBOOKS_SUCCESS = 'GET_RECOMMANDBOOKS_SUCCESS';
@@ -23,7 +24,7 @@ export const fetchRecommadBook = (recommand, query = '', loadMore = false) => (
   dispatch,
   getState
 ) => {
-  console.log(`recommand: ${recommand}`);
+  // console.log(`recommand: ${recommand}`);
   const data = recommandBookData;
   dispatch({
     type: GET_RECOMMANDBOOKS_SUCCESS,

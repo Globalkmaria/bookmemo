@@ -19,10 +19,10 @@ export const saveItem = ({ id, data, editedTime }) => async (
   getState
 ) => {
   const itemsData = getState().items;
-  console.log(itemsData);
+  // console.log(itemsData);
   const items = itemsData.data;
   const sameitem = items.find((item) => item.id * 1 === id * 1);
-  console.log(sameitem);
+  // console.log(sameitem);
   if (sameitem) {
     dispatch({ type: DELETE_ITEM, id: id });
   }
@@ -37,7 +37,7 @@ export const deleteItem = (id) => ({
 
 export const getItems = (token) => async (dispatch, getState) => {
   if (!token) return;
-  console.log('getitems');
+  // console.log('getitems');
   try {
     dispatch({ type: GET_ITEMS_PENDING });
     let { data } = await getLocalItems(token);
@@ -55,14 +55,14 @@ export const saveItemstoLocal = (token) => async (getState) => {
   try {
     saveLocalItems(token, data);
   } catch (e) {
-    console.log(e);
+    // console.log(e);
   }
 };
 export const getItem = (postId) => (getState) => {
   const { data } = getState().items.items;
-  console.log(data);
+  // console.log(data);
   const post = data.find((item) => item.id === postId);
-  console.log(post);
+  // console.log(post);
   return post;
 };
 // 리듀서

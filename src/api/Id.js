@@ -232,6 +232,8 @@ let localData = [
           publisher: '길벗',
           publishedDate: '2018-08-01',
           text: '리액트는 참 좋아!!',
+          url:
+            'https://search.daum.net/search?w=bookpage&bookId=1598637&q=%EB%A6%AC%EC%95%A1%ED%8A%B8%EB%A5%BC+%EB%8B%A4%EB%A3%A8%EB%8A%94+%EA%B8%B0%EC%88%A0',
           thumbnail:
             'https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F1598637%3Ftimestamp%3D20210103145731',
         },
@@ -247,6 +249,8 @@ let localData = [
           publisher: '조화로운삶',
           publishedDate: '2008-03-21',
           text: '언제나 힘이되는 책!',
+          url:
+            'https://search.daum.net/search?w=bookpage&bookId=1370643&q=%EA%B7%B8%EB%9E%98%EB%8F%84+%EA%B3%84%EC%86%8D+%EA%B0%80%EB%9D%BC%28%EC%96%91%EC%9E%A5%EB%B3%B8+HardCover%29',
           thumbnail:
             'https://search1.kakaocdn.net/thumb/R120x174.q85/?fname=http%3A%2F%2Ft1.daumcdn.net%2Flbook%2Fimage%2F1370643%3Ftimestamp%3D20201102133843',
         },
@@ -283,12 +287,12 @@ export const saveAccount = (id, password) =>
         ...accounts,
         { number: nextNum, id, password, token: maketoken(password) },
       ];
-      console.log(accounts);
+      // console.log(accounts);
       setTimeout(() => {
         res('account created');
       }, 500);
     } else {
-      console.log('reject');
+      // console.log('reject');
       reject(
         new Error(
           '같은 아이디의 계정이 존재합니다. 다른 아이디를 입력해주세요.'
@@ -302,7 +306,7 @@ export const getLocalItems = (token) =>
     if (token) {
       setTimeout(() => {
         // res(JSON.stringify(localStorage.getItem(`${token}_items`)));
-        console.log('settimeout');
+        // console.log('settimeout');
         const data = localData.find((d) => d.token === token);
         if (data) {
           res(data);
