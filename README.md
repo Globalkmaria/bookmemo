@@ -15,10 +15,10 @@ Test account -> id: test, password: 1234
 
 ## Technologies
 
-- REACT
-- redux, redux-thunk
-- react-router-dom
-- Rest API(Kakao API)
+- React
+- Redux, Redux-thunk
+- React-router-dom
+- Open Api(Kakao API)
 - SASS(SCSS)
 
 ## What is Bookmemo?
