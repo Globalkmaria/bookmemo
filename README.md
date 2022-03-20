@@ -17,9 +17,9 @@ Test account -> id: test, password: 1234
 
 - React
 - Redux, Redux-thunk
-- React-router-dom
+- React Router
+- Sass
 - Open Api(Kakao API)
-- SASS(SCSS)
 
 ## What is Bookmemo?
 
